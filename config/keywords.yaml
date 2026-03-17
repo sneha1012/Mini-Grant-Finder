@@ -1,0 +1,90 @@
+# Keywords for grant search matching
+# Organized by Delta Rising Foundation program areas
+
+organization:
+  name: "Delta Rising Foundation"
+  ein: "84-2889631"
+  location: "Garden Grove, California"
+  type: "501(c)(3) nonprofit"
+
+programs:
+  ai_climate_tools:
+    display_name: "AI Climate Tools"
+    description: "Software for monitoring, reporting, and verification of nature-based carbon markets"
+    keywords:
+      - "carbon market"
+      - "MRV technology"
+      - "climate AI"
+      - "carbon verification"
+      - "nature-based solutions"
+      - "environmental data"
+      - "climate technology"
+      - "carbon monitoring"
+      - "reporting and verification"
+
+  resilience_nursery:
+    display_name: "Resilience Nursery"
+    description: "Propagates and distributes native, drought-resistant, kitchen garden, and pollinator plants"
+    keywords:
+      - "native plants"
+      - "drought resistant"
+      - "pollinator habitat"
+      - "urban agriculture"
+      - "community garden"
+      - "food forest"
+      - "plant propagation"
+      - "native species"
+      - "seed library"
+      - "food security"
+
+  more_shade:
+    display_name: "More Shade for More People"
+    description: "Shade structures combining ancient wisdom with modern technology for urban resilience"
+    keywords:
+      - "urban shade"
+      - "heat island"
+      - "urban resilience"
+      - "community cooling"
+      - "shade structure"
+      - "urban canopy"
+      - "heat vulnerability"
+      - "tree canopy"
+      - "urban forestry"
+
+  cbecn:
+    display_name: "Community Biodiversity Energy Carbon Network"
+    description: "Partners with indigenous peoples, smallholder farmers, and local communities for carbon projects"
+    keywords:
+      - "indigenous communities"
+      - "carbon credits"
+      - "smallholder farmer"
+      - "biodiversity conservation"
+      - "nature-based carbon"
+      - "IPLC"
+      - "agroforestry"
+      - "traditional ecological knowledge"
+      - "community carbon"
+
+cross_cutting:
+  keywords:
+    - "environmental justice"
+    - "racial equity"
+    - "antiracism"
+    - "circular economy"
+    - "sustainable development"
+    - "community empowerment"
+    - "climate adaptation"
+    - "underrepresented communities"
+    - "equitable climate"
+    - "social justice"
+
+# Grant filtering criteria
+filters:
+  min_amount: 500
+  max_amount: 200000
+  exclude_expired: true
+  eligible_org_types:
+    - "501(c)(3)"
+    - "nonprofit"
+    - "community organization"
+    - "CBO"
