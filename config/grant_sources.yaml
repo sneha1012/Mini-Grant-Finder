@@ -1,0 +1,123 @@
+# Grant data sources for automated discovery
+# Each source has a type, URL, and scraping configuration
+
+grants_gov:
+  name: "Grants.gov"
+  type: "api"
+  base_url: "https://www.grants.gov"
+  xml_feed: "https://www.grants.gov/xml/XMLExtract.zip"
+  search_url: "https://www.grants.gov/grantsws/rest/opportunities/search/"
+  categories:
+    - "environment"
+    - "natural_resources"
+    - "community_development"
+    - "agriculture"
+    - "science_technology"
+  eligible_types:
+    - "G"  # Grant
+    - "CA"  # Cooperative Agreement
+  agency_codes:
+    - "EPA"
+    - "USDA-NIFA"
+    - "DOI"
+    - "DOE"
+    - "NOAA"
+  max_results: 100
+  schedule: "daily"
+
+rss_feeds:
+  - name: "Philanthropy News Digest (PND)"
+    url: "https://philanthropynewsdigest.org/rfps/feed"
+    type: "rss"
+    schedule: "daily"
+
+  - name: "EPA Grants"
+    url: "https://www.epa.gov/grants/epa-grants-rss-feed"
+    type: "rss"
+    schedule: "daily"
+
+  - name: "CA Grants Portal"
+    url: "https://www.grants.ca.gov/grants/rss/"
+    type: "rss"
+    schedule: "daily"
+
+  - name: "Federal Register - Environment"
+    url: "https://www.federalregister.gov/documents/search.rss?conditions%5Bagencies%5D%5B%5D=environmental-protection-agency&conditions%5Btype%5D%5B%5D=NOTICE"
+    type: "rss"
+    schedule: "daily"
+
+  - name: "Grants.gov RSS - Environment"
+    url: "https://www.grants.gov/rss/GG_OppModByCategory_ENV.xml"
+    type: "rss"
+    schedule: "daily"
+
+keyword_search:
+  engine: "duckduckgo"
+  max_results_per_query: 15
+  cooldown_seconds: 3
+  query_templates:
+    # Magic Keyword Algorithm patterns from the team's manual process
+    - '"{keyword}" "request for proposals" nonprofit grant 2026'
+    - '"{keyword}" mini grant community nonprofit application'
+    - '"donation request" "{keyword}" California nonprofit'
+    - '"{keyword}" foundation grant small nonprofit environment'
+    - '"{keyword}" grant opportunity 501c3 climate'
+  schedule: "weekly"
+
+website_scrapers:
+  - name: "Orange County Community Foundation"
+    url: "https://www.oc-cf.org/grants/"
+    type: "html"
+    selectors:
+      grants_list: ".grant-opportunity, .funding-opportunity"
+      title: "h3, .grant-title"
+      deadline: ".deadline, .due-date"
+      amount: ".amount, .grant-amount"
+    schedule: "weekly"
+
+  - name: "SoCalGas Climate Champions"
+    url: "https://socalclimatechampionsgrant.com/"
+    type: "html"
+    selectors:
+      grants_list: ".grant-info, .program-details"
+      title: "h2, h3"
+      deadline: ".deadline"
+    schedule: "weekly"
+
+  - name: "Clean Power Alliance"
+    url: "https://cleanpoweralliance.org/community-programs/"
+    type: "html"
+    selectors:
+      grants_list: ".program-card, .grant-listing"
+      title: "h3"
+      deadline: ".deadline, .date"
+    schedule: "weekly"
+
+  - name: "Sprouts Foundation"
+    url: "https://about.sprouts.com/donation-and-sponsorship-application/"
+    type: "html"
+    selectors:
+      grants_list: ".grant-info"
+      title: "h2, h3"
+    schedule: "weekly"
+
+  - name: "CA Grants Portal"
+    url: "https://www.grants.ca.gov/grants/"
+    type: "html"
+    params:
+      keyword: "environment climate community"
+      status: "open"
+    selectors:
+      grants_list: ".grant-listing"
+      title: ".grant-title"
+      deadline: ".grant-deadline"
+      amount: ".grant-amount"
+    schedule: "weekly"
+
+# Rate limiting and politeness
+scraping_config:
+  user_agent: "DeltaRisingGrantFinder/1.0 (nonprofit research; contact@deltarising.org)"
+  request_delay_seconds: 2
+  max_retries: 3
+  timeout_seconds: 30
+  respect_robots_txt: true

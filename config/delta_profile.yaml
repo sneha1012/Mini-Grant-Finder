@@ -1,0 +1,118 @@
+# Delta Rising Foundation - Organization Profile
+# Used for grant eligibility matching and relevance scoring
+
+organization:
+  name: "Delta Rising Foundation"
+  legal_name: "Delta Rising Foundation"
+  ein: "84-2889631"
+  type: "501(c)(3)"
+  location:
+    city: "Garden Grove"
+    county: "Orange County"
+    state: "California"
+    zip: "92840"
+    country: "United States"
+  founded_year: 2020
+  annual_budget: "under_350k"
+  staff_size: "under_10"
+  website: "https://deltarising.org"
+
+  mission: >
+    Delta Rising Foundation accelerates science-based systemic solutions
+    and evolves the art of sustainable culture.
+
+  vision: >
+    An antiracist world of circular economies with minimized externalities
+    and optimized carbon footprints where historically underrepresented
+    groups have equal voices.
+
+  focus_areas:
+    - "climate change"
+    - "environmental justice"
+    - "carbon markets"
+    - "native plants"
+    - "urban resilience"
+    - "indigenous communities"
+    - "biodiversity"
+    - "community empowerment"
+    - "racial equity"
+    - "sustainable agriculture"
+
+programs:
+  ai_climate_tools:
+    name: "AI Climate Tools"
+    description: >
+      Software for monitoring, reporting, and verification (MRV) of
+      nature-based carbon markets. Uses AI and data science to improve
+      carbon credit verification and environmental data analysis.
+    weight: 1.0
+    budget: "under_50k"
+
+  resilience_nursery:
+    name: "Resilience Nursery"
+    description: >
+      Propagates and distributes native, drought-resistant, kitchen garden,
+      and pollinator plants. Provides education on urban agriculture,
+      food forests, and seed saving for community food security.
+    weight: 1.0
+    budget: "under_50k"
+
+  more_shade:
+    name: "More Shade for More People"
+    description: >
+      Shade structures combining ancient wisdom with modern technology
+      for urban resilience. Addresses urban heat island effect and
+      provides community cooling solutions.
+    weight: 1.0
+    budget: "under_50k"
+
+  cbecn:
+    name: "Community Biodiversity Energy Carbon Network (CBECN)"
+    description: >
+      Partners with indigenous peoples, smallholder farmers, and local
+      communities on carbon projects. Supports traditional ecological
+      knowledge and community-based natural resource management.
+    weight: 1.0
+    budget: "under_50k"
+
+# Eligibility criteria for grant filtering
+eligibility:
+  org_types:
+    - "501(c)(3)"
+    - "nonprofit"
+    - "community organization"
+    - "CBO"
+  geographic:
+    primary:
+      - "Garden Grove"
+      - "Orange County"
+      - "California"
+      - "United States"
+      - "National"
+      - "Global"
+    exclude:
+      - "New York only"
+      - "East Coast only"
+  budget_range:
+    min: 100
+    max: 500000
+  grant_types:
+    preferred:
+      - "foundation_grant"
+      - "government_grant"
+      - "corporate_grant"
+      - "mini_grant"
+      - "community_grant"
+    accepted:
+      - "in_kind"
+      - "sponsorship"
+      - "fundraiser"
+
+# Scoring weights for relevance calculation
+scoring:
+  mission_alignment: 0.35
+  program_match: 0.25
+  geographic_fit: 0.15
+  amount_fit: 0.10
+  deadline_urgency: 0.10
+  effort_level: 0.05
