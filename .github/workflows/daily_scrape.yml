@@ -1,0 +1,124 @@
+# Mini-Grant Finder — Daily Automated Scraping Pipeline
+#
+# Runs every morning at 7:00 AM Pacific to discover new grant
+# opportunities and update the grant database.
+#
+# Also runs on manual trigger for on-demand updates.
+
+name: Daily Grant Discovery
+
+on:
+  schedule:
+    # Run at 7:00 AM Pacific (14:00 UTC) Monday through Friday
+    - cron: '0 14 * * 1-5'
+
+  workflow_dispatch:
+    inputs:
+      scrapers:
+        description: 'Scrapers to run (comma-separated: grants_gov,rss,keyword,website)'
+        required: false
+        default: 'grants_gov,rss'
+      include_research:
+        description: 'Include research CSV data'
+        required: false
+        default: 'true'
+
+permissions:
+  contents: write
+
+jobs:
+  scrape-and-score:
+    name: Find & Score Grants
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run grant discovery pipeline
+        env:
+          GOOGLE_SHEETS_ID: ${{ secrets.GOOGLE_SHEETS_ID }}
+          GOOGLE_SHEETS_CREDENTIALS: ${{ secrets.GOOGLE_SHEETS_CREDENTIALS }}
+        run: |
+          python -c "
+          from src.main import run_pipeline
+          import json
+
+          # Determine scrapers to run
+          scrapers_input = '${{ github.event.inputs.scrapers }}'
+          if scrapers_input:
+              scrapers = [s.strip() for s in scrapers_input.split(',')]
+          else:
+              scrapers = ['grants_gov', 'rss']
+
+          # Determine if research data should be included
+          include_research = '${{ github.event.inputs.include_research }}'
+          use_research = include_research != 'false'
+
+          results = run_pipeline(
+              use_scrapers=True,
+              use_research=use_research,
+              scrapers=scrapers,
+              exclude_expired=True,
+              tag='daily',
+              log_level='INFO',
+          )
+
+          # Write summary for the workflow
+          print('\n=== PIPELINE SUMMARY ===')
+          print(f'Raw grants found:  {results[\"raw_count\"]}')
+          print(f'After processing:  {results[\"processed_count\"]}')
+          print(f'Scored & stored:   {results[\"scored_count\"]}')
+          print(f'Time elapsed:      {results[\"elapsed_seconds\"]:.1f}s')
+          print()
+          print('Top 5 grants:')
+          for i, g in enumerate(results.get('top_grants', [])[:5], 1):
+              print(f'  {i}. [{g[\"score\"]:.0f}] {g[\"name\"][:60]}')
+          "
+
+      - name: Commit updated data
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "actions@github.com"
+          git add data/processed/ || true
+          if git diff --staged --quiet; then
+            echo "No new data to commit"
+          else
+            git commit -m "chore: update grant data ($(date +%Y-%m-%d))"
+            git push
+          fi
+
+      - name: Upload data artifact
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: grant-data-${{ github.run_number }}
+          path: data/processed/latest.json
+          retention-days: 30
+
+  notify:
+    name: Summary
+    needs: scrape-and-score
+    runs-on: ubuntu-latest
+    if: always()
+
+    steps:
+      - name: Pipeline result
+        run: |
+          if [ "${{ needs.scrape-and-score.result }}" == "success" ]; then
+            echo "Grant discovery pipeline completed successfully"
+          else
+            echo "Grant discovery pipeline failed — check logs"
+          fi
