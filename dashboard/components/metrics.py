@@ -16,7 +16,7 @@ def render_metrics_row(metrics: dict) -> None:
         metrics: Dict with keys: total_grants, urgent_count,
                  high_relevance, new_today, total_funding, avg_score
     """
-    col1, col2, col3, col4 = st.columns(4)
+    col1, col2, col3, col4, col5 = st.columns(5)
 
     with col1:
         st.markdown(
@@ -66,7 +66,19 @@ def render_metrics_row(metrics: dict) -> None:
             f"""
             <div class="metric-card">
                 <div class="metric-value">{funding_display}</div>
-                <div class="metric-label">Total Funding Found</div>
+                <div class="metric-label">Funding Discovered</div>
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )
+
+    with col5:
+        avg = metrics.get("avg_score", 0)
+        st.markdown(
+            f"""
+            <div class="metric-card">
+                <div class="metric-value">{avg:.0f}</div>
+                <div class="metric-label">Avg Relevance</div>
             </div>
             """,
             unsafe_allow_html=True,
