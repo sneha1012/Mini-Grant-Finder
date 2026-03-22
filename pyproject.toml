@@ -1,0 +1,53 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "mini-grant-finder"
+version = "1.0.0"
+description = "Automated grant discovery dashboard for Delta Rising Foundation"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.10"
+authors = [
+    {name = "Sneha Maurya", email = "sneha@deltarising.org"},
+]
+keywords = [
+    "grants", "nonprofit", "automation", "scraping",
+    "dashboard", "streamlit", "tfidf", "nlp",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Office/Business",
+    "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
+]
+dependencies = [
+    "beautifulsoup4>=4.12.0",
+    "requests>=2.31.0",
+    "lxml>=5.1.0",
+    "pandas>=2.1.0",
+    "pyyaml>=6.0.1",
+    "scikit-learn>=1.3.0",
+    "streamlit>=1.29.0",
+    "feedparser>=6.0.0",
+    "python-dateutil>=2.8.0",
+    "tqdm>=4.66.0",
+    "duckduckgo-search>=4.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/sneha1012/Mini-Grant-Finder"
+Repository = "https://github.com/sneha1012/Mini-Grant-Finder"
+Issues = "https://github.com/sneha1012/Mini-Grant-Finder/issues"
+
+[project.scripts]
+grant-finder = "src.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["src*", "dashboard*"]
