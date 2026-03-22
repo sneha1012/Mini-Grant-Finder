@@ -25,3 +25,16 @@ duckduckgo-search>=4.0
 # Utilities
 python-dateutil>=2.8.0
 tqdm>=4.66.0
+
+# --- Optional dependencies ---
+# Google Sheets integration (uncomment if using Sheets storage)
+# google-api-python-client>=2.100.0
+# google-auth>=2.23.0
+
+# Browser automation for JS-rendered sites (uncomment if needed)
+# playwright>=1.40.0
+
+# Development / testing
+# pytest>=7.4.0
+# pytest-cov>=4.1.0
+# ruff>=0.1.0
