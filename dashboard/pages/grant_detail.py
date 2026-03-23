@@ -93,9 +93,9 @@ def render_grant_detail(grants: list[Grant]) -> None:
         # Relevance score
         score = grant.relevance_score
         score_color = (
-            "#2ecc71" if score >= 70
-            else "#f39c12" if score >= 40
-            else "#e74c3c"
+            "#2d8a56" if score >= 70
+            else "#d4800a" if score >= 40
+            else "#c0392b"
         )
         st.markdown(
             f"""
