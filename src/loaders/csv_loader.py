@@ -166,18 +166,18 @@ def classify_grant_type(type_text: str, name: str = "") -> GrantType:
         return GrantType.STATE_GRANT
     if "mini" in combined:
         return GrantType.MINI_GRANT
-    if "foundation" in text:
-        return GrantType.FOUNDATION_GRANT
-    if "corporate" in text or "retail" in text or "bank" in text or "utility" in text:
-        return GrantType.CORPORATE_GRANT
-    if "community" in text or "credit union" in text:
-        return GrantType.COMMUNITY_GRANT
     if "in-kind" in text or "donation" in text or "in kind" in text:
         return GrantType.IN_KIND
     if "sponsorship" in text:
         return GrantType.SPONSORSHIP
     if "fundraiser" in text or "restaurant" in text:
         return GrantType.FUNDRAISER
+    if "foundation" in text:
+        return GrantType.FOUNDATION_GRANT
+    if "corporate" in text or "retail" in text or "bank" in text or "utility" in text:
+        return GrantType.CORPORATE_GRANT
+    if "community" in text or "credit union" in text:
+        return GrantType.COMMUNITY_GRANT
 
     return GrantType.UNKNOWN
 
