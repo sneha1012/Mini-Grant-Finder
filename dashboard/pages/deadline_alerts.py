@@ -70,40 +70,35 @@ def render_deadline_alerts(grants: list[Grant]) -> None:
         _render_urgency_section(
             "This Week",
             this_week,
-            color="#e74c3c",
-            emoji="🔴",
+            color="#c0392b",
         )
 
     if next_two_weeks:
         _render_urgency_section(
             "Next 2 Weeks",
             next_two_weeks,
-            color="#e67e22",
-            emoji="🟠",
+            color="#b8860b",
         )
 
     if this_month:
         _render_urgency_section(
             "This Month",
             this_month,
-            color="#f1c40f",
-            emoji="🟡",
+            color="#d4a017",
         )
 
     if upcoming:
         _render_urgency_section(
             "Upcoming",
             upcoming,
-            color="#2ecc71",
-            emoji="🟢",
+            color="#3a7d5c",
         )
 
     if rolling:
         _render_urgency_section(
             "Rolling / Always Open",
             rolling,
-            color="#95a5a6",
-            emoji="🔵",
+            color="#7a8a96",
         )
 
     if not any([this_week, next_two_weeks, this_month, upcoming, rolling]):
@@ -125,7 +120,6 @@ def _render_urgency_section(
     title: str,
     grants: list[Grant],
     color: str,
-    emoji: str,
 ) -> None:
     """
     Render a section of grants grouped by urgency level.
@@ -134,12 +128,15 @@ def _render_urgency_section(
         title: Section title
         grants: Grants in this urgency group
         color: Accent color for the section
-        emoji: Emoji indicator
     """
     st.markdown(
         f"""
-        <div style="border-left: 4px solid {color}; padding-left: 12px; margin: 20px 0 10px 0;">
-            <h4>{emoji} {title} ({len(grants)} grants)</h4>
+        <div class="urgency-header" style="border-left-color: {color};">
+            <h4>
+                <span class="urgency-badge" style="background: {color};"></span>
+                {title}
+                <span class="urgency-count">&middot; {len(grants)} grant{'s' if len(grants) != 1 else ''}</span>
+            </h4>
         </div>
         """,
         unsafe_allow_html=True,
