@@ -507,3 +507,19 @@ hr {
 .footer a:hover {
     text-decoration: underline;
 }
+
+/* === Responsive === */
+@media (max-width: 768px) {
+    .hero { margin: -1rem -1rem 1.5rem; min-height: 220px; }
+    .hero-title { font-size: 2rem; }
+    .hero-top { padding: 1rem; }
+    .hero-content { padding: 1rem 1rem 1.5rem; }
+    .hero-contact { display: none; }
+    .metric-value { font-size: 1.6rem; }
+}
+
+/* === Print === */
+@media print {
+    .hero { break-after: avoid; }
+    .stDownloadButton { display: none; }
+}
