@@ -470,3 +470,22 @@ hr {
     color: var(--ink-muted);
     font-size: 0.8rem;
 }
+
+/* === Deadline Items === */
+.deadline-item {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--border-light);
+    font-size: 0.84rem;
+    line-height: 1.5;
+}
+
+.deadline-item:last-child { border-bottom: none; }
+
+.deadline-date {
+    font-weight: 600;
+    color: var(--ink);
+}
+
+.deadline-name {
+    color: var(--ink-light);
+}
