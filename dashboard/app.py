@@ -125,6 +125,16 @@ def main():
     with tab3:
         render_grant_detail(grants)
 
+    # --- Footer ---
+    st.markdown(
+        '<div class="footer">'
+        'Delta Rising Foundation &middot; Garden Grove, CA &middot; '
+        '<a href="https://www.deltarisingfoundation.org" target="_blank">'
+        'deltarisingfoundation.org</a>'
+        '</div>',
+        unsafe_allow_html=True,
+    )
+
 
 def render_dashboard(grants):
     metrics = get_summary_metrics(grants)
@@ -164,16 +174,22 @@ def render_dashboard(grants):
             for item in timeline[:6]:
                 days = item["days_left"]
                 if days <= 7:
-                    indicator = "&#128308;"  # red
+                    dot_color = "#9e3b33"
                 elif days <= 30:
-                    indicator = "&#128992;"  # orange
+                    dot_color = "#8a7030"
                 else:
-                    indicator = "&#128994;"  # green
+                    dot_color = "#3a6b4a"
 
+                name = item['name'][:42]
+                ellipsis = '...' if len(item['name']) > 42 else ''
                 st.markdown(
-                    f"{indicator} **{item['deadline'].strftime('%b %d')}** "
-                    f"&mdash; {item['name'][:45]}"
-                    f"{'...' if len(item['name']) > 45 else ''}",
+                    f'<div class="deadline-item">'
+                    f'<span style="display:inline-block;width:7px;height:7px;'
+                    f'border-radius:50%;background:{dot_color};margin-right:8px;'
+                    f'vertical-align:middle;"></span>'
+                    f'<span class="deadline-date">{item["deadline"].strftime("%b %d")}</span>'
+                    f' &mdash; <span class="deadline-name">{name}{ellipsis}</span>'
+                    f'</div>',
                     unsafe_allow_html=True,
                 )
         else:
@@ -186,7 +202,7 @@ def render_dashboard(grants):
     st.markdown(
         f'<div style="display:flex; justify-content:space-between; align-items:baseline;">'
         f'<h3 style="margin:0;">Grant Opportunities</h3>'
-        f'<span style="color:#7a9188; font-size:0.9rem;">'
+        f'<span style="color:#8a8a7a; font-size:0.85rem;">'
         f'Showing {len(filtered_grants)} of {len(grants)} grants</span></div>',
         unsafe_allow_html=True,
     )
