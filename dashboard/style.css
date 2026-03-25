@@ -391,3 +391,48 @@ hr {
     background: rgba(255,255,255,0.3);
     display: inline-block;
 }
+
+/* === Tabs === */
+.stTabs [data-baseweb="tab-list"] {
+    gap: 0;
+    border-bottom: 1px solid var(--border);
+    background: transparent;
+    padding: 0;
+}
+
+.stTabs [data-baseweb="tab"] {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: var(--ink-muted);
+    padding: 0.9rem 1.8rem;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -1px;
+    background: transparent !important;
+}
+
+.stTabs [data-baseweb="tab"]:hover {
+    color: var(--ink);
+    background: transparent !important;
+}
+
+.stTabs [aria-selected="true"] {
+    color: var(--forest-dark) !important;
+    border-bottom-color: var(--forest-dark) !important;
+    background: transparent !important;
+}
+
+/* Kill the default Streamlit tab highlight bar */
+.stTabs [data-baseweb="tab-highlight"] {
+    background-color: var(--forest-dark) !important;
+}
+
+/* Kill any blue/purple focus highlight on tabs */
+.stTabs [data-baseweb="tab-list"] button:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.stTabs [data-baseweb="tab-border"] {
+    display: none !important;
+}
