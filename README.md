@@ -115,3 +115,30 @@ mini-grant-finder/
 ├── pyproject.toml
 └── Procfile                   # Streamlit Cloud deployment
 ```
+
+---
+
+## Tech Stack
+
+Everything is free and open-source. **Total cost: $0/month.**
+
+| Component | Tool | Cost |
+|-----------|------|------|
+| Scraping | BeautifulSoup, feedparser, duckduckgo-search | Free |
+| Scoring | scikit-learn TF-IDF | Free |
+| Storage | JSON files + Google Sheets API | Free |
+| Dashboard | Streamlit | Free |
+| Hosting | Streamlit Community Cloud | Free |
+| Automation | GitHub Actions cron | Free |
+
+---
+
+## Data Sources
+
+| Source | Coverage | Method |
+|--------|----------|--------|
+| **Grants.gov** | Federal grants (EPA, USDA, DOI, DOE) | Free REST/XML API |
+| **RSS Feeds** | PND, EPA, CA Grants Portal, Federal Register | feedparser |
+| **Keyword Search** | Web-wide grant discovery | DuckDuckGo (free) |
+| **Website Scrapers** | OCCF, SoCalGas, Sprouts, CA Grants | BeautifulSoup |
+| **Research CSVs** | 40+ manually verified grants | CSV loader |
