@@ -142,3 +142,76 @@ Everything is free and open-source. **Total cost: $0/month.**
 | **Keyword Search** | Web-wide grant discovery | DuckDuckGo (free) |
 | **Website Scrapers** | OCCF, SoCalGas, Sprouts, CA Grants | BeautifulSoup |
 | **Research CSVs** | 40+ manually verified grants | CSV loader |
+
+---
+
+## Scoring
+
+Grants are scored 0-100 using two complementary methods:
+
+1. **TF-IDF Relevance** (60% weight) — Cosine similarity between grant text and Delta's mission/vision using scikit-learn's TfidfVectorizer with bigrams and sublinear TF
+2. **Program Match** (40% weight) — Keyword-based matching against each program's keyword set from `config/keywords.yaml`
+
+The match explanation feature shows *which specific keywords* triggered each program match, so the team understands why a grant was recommended.
+
+---
+
+## Automation
+
+GitHub Actions runs the pipeline every weekday at 7:00 AM Pacific:
+
+- Scrapes Grants.gov and RSS feeds for new opportunities
+- Scores and deduplicates against existing data
+- Commits updated JSON to the repo
+- Pushes to Google Sheets (when configured)
+
+Manual runs: `Actions > Daily Grant Discovery > Run workflow`
+
+---
+
+## Configuration
+
+### Google Sheets (optional)
+
+```bash
+# Set environment variables
+export GOOGLE_SHEETS_ID="your-spreadsheet-id"
+export GOOGLE_SHEETS_CREDENTIALS="/path/to/service-account.json"
+```
+
+### GitHub Secrets (for Actions)
+
+| Secret | Purpose |
+|--------|---------|
+| `GOOGLE_SHEETS_ID` | Spreadsheet ID for data storage |
+| `GOOGLE_SHEETS_CREDENTIALS` | Service account JSON (base64) |
+
+---
+
+## Development
+
+```bash
+# Install with dev dependencies
+pip install -e ".[dev]"
+
+# Run tests
+pytest
+
+# Run with coverage
+pytest --cov=src --cov-report=html
+
+# Lint
+ruff check src/ dashboard/ tests/
+```
+
+---
+
+## License
+
+MIT License. See [LICENSE](LICENSE) for details.
+
+---
+
+**Delta Rising Foundation** — *Accelerating science-based systemic solutions and evolving the art of sustainable culture.*
+
+Garden Grove, California | EIN: 84-2889631
