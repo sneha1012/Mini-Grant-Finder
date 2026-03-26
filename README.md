@@ -63,3 +63,55 @@ python -m src.cli --no-scrape                    # Research data only
 python -m src.cli --scrapers rss keyword         # Specific scrapers
 python -m src.cli --min-score 50 --export csv    # Filter & export
 ```
+
+---
+
+## Project Structure
+
+```
+mini-grant-finder/
+├── config/
+│   ├── keywords.yaml          # Search keywords by program area
+│   ├── grant_sources.yaml     # Data source URLs and selectors
+│   └── delta_profile.yaml     # Org profile for scoring
+├── src/
+│   ├── models/
+│   │   ├── grant.py           # Grant dataclass with enums
+│   │   └── source.py          # Source config models
+│   ├── scrapers/
+│   │   ├── base.py            # Base scraper with rate limiting
+│   │   ├── grants_gov.py      # Grants.gov XML/REST API
+│   │   ├── rss_monitor.py     # RSS feed monitor (5 feeds)
+│   │   ├── keyword_search.py  # DuckDuckGo keyword search
+│   │   └── website_scraper.py # Foundation website scraper
+│   ├── scoring/
+│   │   ├── relevance.py       # TF-IDF relevance scorer
+│   │   └── program_matcher.py # Keyword program matcher
+│   ├── storage/
+│   │   ├── local.py           # JSON file storage
+│   │   └── sheets.py          # Google Sheets integration
+│   ├── loaders/
+│   │   └── csv_loader.py      # Research CSV importer
+│   ├── pipeline/
+│   │   └── processor.py       # Dedup, clean, normalize
+│   ├── main.py                # Pipeline orchestrator
+│   └── cli.py                 # Command-line interface
+├── dashboard/
+│   ├── app.py                 # Streamlit main app
+│   ├── data_loader.py         # Data loading + caching
+│   ├── style.css              # Green-themed custom CSS
+│   ├── components/
+│   │   ├── metrics.py         # KPI metric cards
+│   │   ├── grant_table.py     # Interactive grant table
+│   │   └── filters.py         # Filter controls
+│   └── pages/
+│       ├── grant_detail.py    # Full grant detail view
+│       └── deadline_alerts.py # Deadline urgency timeline
+├── research/                  # 40+ manually researched grants
+├── tests/                     # pytest test suite (50+ tests)
+├── .github/workflows/
+│   └── daily_scrape.yml       # GitHub Actions cron (7 AM PT)
+├── requirements.txt
+├── pyproject.toml
+└── Procfile                   # Streamlit Cloud deployment
+```
