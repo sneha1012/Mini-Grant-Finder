@@ -6,6 +6,7 @@ Run with: streamlit run dashboard/app.py
 
 import base64
 import sys
+from datetime import date
 from pathlib import Path
 
 import streamlit as st
@@ -17,12 +18,10 @@ if str(PROJECT_ROOT) not in sys.path:
 
 from dashboard.data_loader import (
     load_dashboard_data,
-    get_summary_metrics,
     get_program_distribution,
     get_type_distribution,
     get_deadline_timeline,
 )
-from dashboard.components.metrics import render_metrics_row
 from dashboard.components.grant_table import render_grant_table
 from dashboard.components.filters import render_filters
 from dashboard.pages.grant_detail import render_grant_detail
@@ -52,14 +51,14 @@ if css_path.exists():
 
 
 def main():
-    # --- Full-width Hero with oil-painting tree image ---
     hero_path = ASSETS / "hero.jpg"
     logo_path = ASSETS / "logo.webp"
 
-    logo_html = ""
+    # Build logo + org name block
+    brand_html = ""
     if logo_path.exists():
         logo_b64 = _b64(logo_path)
-        logo_html = (
+        brand_html = (
             f'<img src="data:image/webp;base64,{logo_b64}" '
             f'class="hero-logo" alt="Delta Rising Foundation">'
         )
@@ -68,17 +67,17 @@ def main():
         hero_b64 = _b64(hero_path)
         bg_style = (
             f"background-image: "
-            f"linear-gradient(180deg, rgba(15,30,20,0.35) 0%, rgba(20,35,25,0.5) 100%),"
+            f"linear-gradient(180deg, rgba(10,20,15,0.25) 0%, rgba(10,20,15,0.45) 100%),"
             f"url('data:image/jpeg;base64,{hero_b64}');"
         )
     else:
-        bg_style = "background: linear-gradient(135deg, #1B3A5C, #2c5e3f);"
+        bg_style = "background: linear-gradient(135deg, #1a3a2a, #2c5e3f);"
 
     st.markdown(
         f"""
         <div class="hero" style="{bg_style}">
             <div class="hero-top">
-                {logo_html}
+                {brand_html}
                 <div class="hero-contact">
                     <a href="https://www.deltarisingfoundation.org" target="_blank">Website</a>
                     <span class="hero-divider"></span>
@@ -128,20 +127,34 @@ def main():
     # --- Footer ---
     st.markdown(
         '<div class="footer">'
-        'Delta Rising Foundation &middot; Garden Grove, CA &middot; '
+        "Delta Rising Foundation &middot; Garden Grove, CA &middot; EIN 84-2889631<br>"
         '<a href="https://www.deltarisingfoundation.org" target="_blank">'
-        'deltarisingfoundation.org</a>'
-        '</div>',
+        "deltarisingfoundation.org</a> &middot; "
+        "<em>Accelerating science-based systemic solutions and evolving "
+        "the art of sustainable culture.</em>"
+        "</div>",
         unsafe_allow_html=True,
     )
 
 
 def render_dashboard(grants):
-    metrics = get_summary_metrics(grants)
-    render_metrics_row(metrics)
+    # Filters first — right below tabs
+    filtered_grants = render_filters(grants)
 
+    # Grant count + table header
+    st.markdown(
+        f'<div style="display:flex; justify-content:space-between; align-items:baseline; margin-top:0.5rem;">'
+        f'<h3 style="margin:0; border:none; padding:0;">Grant Opportunities</h3>'
+        f'<span style="color:#8a8a7a; font-size:0.8rem;">'
+        f'Showing {len(filtered_grants)} of {len(grants)} grants</span></div>',
+        unsafe_allow_html=True,
+    )
     st.markdown("")
+    render_grant_table(filtered_grants)
 
+    st.markdown("---")
+
+    # Charts row below the table
     chart_col1, chart_col2, chart_col3 = st.columns([1, 1, 1])
 
     with chart_col1:
@@ -180,8 +193,8 @@ def render_dashboard(grants):
                 else:
                     dot_color = "#3a6b4a"
 
-                name = item['name'][:42]
-                ellipsis = '...' if len(item['name']) > 42 else ''
+                name = item['name'][:40]
+                ellipsis = '...' if len(item['name']) > 40 else ''
                 st.markdown(
                     f'<div class="deadline-item">'
                     f'<span style="display:inline-block;width:7px;height:7px;'
@@ -194,20 +207,6 @@ def render_dashboard(grants):
                 )
         else:
             st.caption("No upcoming deadlines found")
-
-    st.markdown("---")
-
-    filtered_grants = render_filters(grants)
-
-    st.markdown(
-        f'<div style="display:flex; justify-content:space-between; align-items:baseline;">'
-        f'<h3 style="margin:0;">Grant Opportunities</h3>'
-        f'<span style="color:#8a8a7a; font-size:0.85rem;">'
-        f'Showing {len(filtered_grants)} of {len(grants)} grants</span></div>',
-        unsafe_allow_html=True,
-    )
-    st.markdown("")
-    render_grant_table(filtered_grants)
 
 
 if __name__ == "__main__":
