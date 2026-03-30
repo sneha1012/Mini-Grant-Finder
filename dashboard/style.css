@@ -1,6 +1,6 @@
 /* ============================================================
    Grant Finder — Delta Rising Foundation
-   Oil-painting hero, warm cream tones, clean professional
+   Professional dashboard with oil-painting hero
    ============================================================ */
 
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap');
@@ -25,56 +25,76 @@
     --radius: 8px;
 }
 
-/* === Base === */
+/* === Base — kill ALL Streamlit padding/chrome === */
 .stApp {
     background: var(--cream) !important;
     font-family: 'Inter', -apple-system, sans-serif;
 }
 
-/* Hide Streamlit chrome */
-header[data-testid="stHeader"] {
-    display: none !important;
-}
-
+/* Nuke every piece of Streamlit chrome that adds space */
+header[data-testid="stHeader"],
+[data-testid="stDecoration"],
+[data-testid="stToolbar"],
+[data-testid="stStatusWidget"],
+iframe[title="streamlit_status_widget"],
 section[data-testid="stSidebar"],
 [data-testid="collapsedControl"] {
     display: none !important;
+    height: 0 !important;
+    min-height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
 }
 
-/* === HERO — Full bleed oil painting === */
+/* Kill every possible top gap */
+.stApp > div:first-child,
+.stApp [data-testid="stAppViewContainer"],
+.stApp [data-testid="stAppViewContainer"] > div:first-child {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+}
+
+.stMainBlockContainer,
+.block-container,
+[data-testid="stMainBlockContainer"],
+.main .block-container {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+    max-width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+/* Content area inside tabs needs side padding */
+.stTabs [data-baseweb="tab-panel"] {
+    padding: 0 3rem;
+}
+
+/* === HERO — Full bleed edge-to-edge === */
 .hero {
-    margin: -1rem -4rem 2rem;
+    margin: 0;
     padding: 0;
-    min-height: 280px;
+    min-height: 300px;
     background-size: cover !important;
-    background-position: center 40% !important;
+    background-position: center 35% !important;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* Oil painting effect */
-    filter: contrast(1.05) saturate(1.15);
 }
 
+/* Subtle warm overlay for painterly feel */
 .hero::after {
     content: '';
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    /* Painterly texture overlay — soft grain */
     background:
         repeating-linear-gradient(
             0deg,
             transparent,
             transparent 2px,
-            rgba(255,255,240,0.015) 2px,
-            rgba(255,255,240,0.015) 4px
-        ),
-        repeating-linear-gradient(
-            90deg,
-            transparent,
-            transparent 3px,
-            rgba(255,255,240,0.01) 3px,
-            rgba(255,255,240,0.01) 6px
+            rgba(255,255,240,0.012) 2px,
+            rgba(255,255,240,0.012) 4px
         );
     pointer-events: none;
 }
@@ -83,30 +103,38 @@ section[data-testid="stSidebar"],
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 1.5rem 2.5rem 0;
+    padding: 1.8rem 3rem 0;
     position: relative;
     z-index: 2;
 }
 
 .hero-logo {
-    height: 60px;
+    height: 56px;
     width: auto;
-    filter: brightness(0) invert(1) drop-shadow(0 2px 8px rgba(0,0,0,0.3));
+    background: rgba(255,255,255,0.92);
+    border-radius: 8px;
+    padding: 6px 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.15);
 }
 
 .hero-contact {
     display: flex;
     align-items: center;
     gap: 0;
+    background: rgba(0,0,0,0.18);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 0.2rem 0.4rem;
 }
 
 .hero-contact a {
-    color: rgba(255,255,255,0.85);
+    color: rgba(255,255,255,0.9);
     text-decoration: none;
-    font-size: 0.78rem;
+    font-size: 0.7rem;
     font-weight: 500;
     letter-spacing: 0.3px;
-    padding: 0.4rem 0.8rem;
+    padding: 0.32rem 0.65rem;
     transition: color 0.2s;
 }
 
@@ -116,13 +144,13 @@ section[data-testid="stSidebar"],
 
 .hero-divider {
     width: 1px;
-    height: 14px;
-    background: rgba(255,255,255,0.3);
+    height: 12px;
+    background: rgba(255,255,255,0.25);
     display: inline-block;
 }
 
 .hero-content {
-    padding: 1.5rem 2.5rem 2.2rem;
+    padding: 0 3rem 2rem;
     position: relative;
     z-index: 2;
 }
@@ -130,41 +158,47 @@ section[data-testid="stSidebar"],
 .hero-title {
     color: #ffffff !important;
     font-family: 'Cormorant Garamond', Georgia, serif;
-    font-size: 3rem;
-    font-weight: 600;
-    margin: 0 0 0.3rem 0;
+    font-size: 3.2rem;
+    font-weight: 700;
+    margin: 0 0 0.2rem 0;
     letter-spacing: -0.5px;
-    text-shadow: 0 2px 20px rgba(0,0,0,0.4), 0 1px 4px rgba(0,0,0,0.3);
-    line-height: 1.1;
+    text-shadow: 0 2px 20px rgba(0,0,0,0.45), 0 1px 3px rgba(0,0,0,0.35);
+    line-height: 1.05;
 }
 
 .hero-subtitle {
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.82);
     font-family: 'Inter', sans-serif;
-    font-size: 0.95rem;
+    font-size: 0.85rem;
     font-weight: 400;
     margin: 0;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.8px;
     text-shadow: 0 1px 8px rgba(0,0,0,0.3);
 }
 
-/* === Tabs === */
+/* === Tabs — tight below hero === */
+.stTabs {
+    padding: 0 3rem;
+}
+
 .stTabs [data-baseweb="tab-list"] {
     gap: 0;
     border-bottom: 1px solid var(--border);
     background: transparent;
     padding: 0;
+    margin-top: 0.6rem;
 }
 
 .stTabs [data-baseweb="tab"] {
     font-family: 'Cormorant Garamond', Georgia, serif;
     font-weight: 600;
-    font-size: 1.05rem;
+    font-size: 1.08rem;
     color: var(--ink-muted);
-    padding: 0.9rem 1.8rem;
+    padding: 0.7rem 1.5rem;
     border-bottom: 2px solid transparent;
     margin-bottom: -1px;
     background: transparent !important;
+    transition: color 0.15s;
 }
 
 .stTabs [data-baseweb="tab"]:hover {
@@ -178,12 +212,10 @@ section[data-testid="stSidebar"],
     background: transparent !important;
 }
 
-/* Kill the default Streamlit tab highlight bar */
 .stTabs [data-baseweb="tab-highlight"] {
     background-color: var(--forest-dark) !important;
 }
 
-/* Kill any blue/purple focus highlight on tabs */
 .stTabs [data-baseweb="tab-list"] button:focus {
     outline: none !important;
     box-shadow: none !important;
@@ -198,7 +230,7 @@ section[data-testid="stSidebar"],
     background: var(--warm-white);
     border: 1px solid var(--border-light);
     border-radius: var(--radius);
-    padding: 1.3rem 1rem;
+    padding: 1rem 0.6rem;
     text-align: center;
     box-shadow: var(--shadow-sm);
     transition: all 0.2s ease;
@@ -222,15 +254,15 @@ section[data-testid="stSidebar"],
 
 .metric-value {
     font-family: 'Cormorant Garamond', Georgia, serif;
-    font-size: 2.2rem;
+    font-size: 2rem;
     font-weight: 700;
     color: var(--ink);
     line-height: 1.1;
-    margin-bottom: 0.3rem;
+    margin-bottom: 0.2rem;
 }
 
 .metric-label {
-    font-size: 0.68rem;
+    font-size: 0.6rem;
     color: var(--ink-muted);
     font-weight: 600;
     text-transform: uppercase;
@@ -252,9 +284,9 @@ section[data-testid="stSidebar"],
 
 /* === Deadline Items === */
 .deadline-item {
-    padding: 0.5rem 0;
+    padding: 0.4rem 0;
     border-bottom: 1px solid var(--border-light);
-    font-size: 0.84rem;
+    font-size: 0.8rem;
     line-height: 1.5;
 }
 
@@ -493,10 +525,12 @@ hr {
 /* === Footer === */
 .footer {
     text-align: center;
-    padding: 1.5rem 0 1rem;
+    padding: 2rem 3rem 1.2rem;
     color: var(--ink-muted);
-    font-size: 0.75rem;
+    font-size: 0.72rem;
     letter-spacing: 0.3px;
+    border-top: 1px solid var(--border-light);
+    margin-top: 2rem;
 }
 
 .footer a {
@@ -508,14 +542,41 @@ hr {
     text-decoration: underline;
 }
 
+/* === Last updated badge === */
+.last-updated {
+    display: inline-block;
+    background: var(--cream-dark);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 0.3rem 0.9rem;
+    font-size: 0.68rem;
+    color: var(--ink-muted);
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}
+
+/* === Section titles inside tab panels === */
+.section-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.62rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.8px;
+    color: var(--ink-muted);
+    margin: 1.2rem 0 0.5rem 0;
+}
+
 /* === Responsive === */
 @media (max-width: 768px) {
-    .hero { margin: -1rem -1rem 1.5rem; min-height: 220px; }
+    .hero { min-height: 220px; }
     .hero-title { font-size: 2rem; }
     .hero-top { padding: 1rem; }
     .hero-content { padding: 1rem 1rem 1.5rem; }
     .hero-contact { display: none; }
+    .hero-logo { height: 40px; padding: 4px 8px; }
     .metric-value { font-size: 1.6rem; }
+    .stTabs { padding: 0 1rem; }
+    .stTabs [data-baseweb="tab-panel"] { padding: 0 1rem; }
 }
 
 /* === Print === */
