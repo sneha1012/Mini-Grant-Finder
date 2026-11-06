@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-11-05T20:59:18.662920",
+    "generated_at": "2026-11-06T20:19:29.438299",
     "total_grants": 85,
     "tag": "daily",
     "version": "1.0"
@@ -32,7 +32,7 @@
       "matched_programs": [],
       "priority": "medium",
       "discovered_date": "2026-08-18T22:33:00",
-      "last_updated": "2026-11-05T20:59:18.370552"
+      "last_updated": "2026-11-06T20:19:29.155505"
     },
     {
       "grant_id": "94891344a49d82db",
@@ -62,7 +62,7 @@
       "matched_programs": [],
       "priority": "medium",
       "discovered_date": "2026-09-17T16:25:00",
-      "last_updated": "2026-11-05T20:59:18.370537"
+      "last_updated": "2026-11-06T20:19:29.155485"
     },
     {
       "grant_id": "4d2a8dfce71d6cc3",
@@ -90,7 +90,7 @@
       "matched_programs": [],
       "priority": "medium",
       "discovered_date": "2026-08-17T16:32:00",
-      "last_updated": "2026-11-05T20:59:18.370553"
+      "last_updated": "2026-11-06T20:19:29.155507"
     },
     {
       "grant_id": "56d221a2d5bbdaef",
@@ -116,8 +116,8 @@
       "relevance_score": 46.8,
       "matched_programs": [],
       "priority": "medium",
-      "discovered_date": "2026-11-05T20:57:53.834946",
-      "last_updated": "2026-11-05T20:59:18.370464"
+      "discovered_date": "2026-11-06T20:18:07.414834",
+      "last_updated": "2026-11-06T20:19:29.155387"
     },
     {
       "grant_id": "fb6bc0e7c2df48e6",
@@ -147,7 +147,7 @@
       "matched_programs": [],
       "priority": "medium",
       "discovered_date": "2026-09-18T08:00:00",
-      "last_updated": "2026-11-05T20:59:18.370535"
+      "last_updated": "2026-11-06T20:19:29.155482"
     },
     {
       "grant_id": "14430a623610b6ce",
@@ -174,7 +174,7 @@
       "matched_programs": [],
       "priority": "medium",
       "discovered_date": "2026-09-09T17:07:00",
-      "last_updated": "2026-11-05T20:59:18.370540"
+      "last_updated": "2026-11-06T20:19:29.155488"
     },
     {
       "grant_id": "58cf48e72b649433",
@@ -204,7 +204,7 @@
       "matched_programs": [],
       "priority": "medium",
       "discovered_date": "2026-07-23T15:00:00",
-      "last_updated": "2026-11-05T20:59:18.370561"
+      "last_updated": "2026-11-06T20:19:29.155518"
     },
     {
       "grant_id": "02118fcd141b1208",
@@ -232,7 +232,7 @@
       "matched_programs": [],
       "priority": "medium",
       "discovered_date": "2026-07-08T19:00:00",
-      "last_updated": "2026-11-05T20:59:18.370567"
+      "last_updated": "2026-11-06T20:19:29.155525"
     },
     {
       "grant_id": "644557d95a9d60a5",
@@ -259,8 +259,8 @@
       "relevance_score": 41.6,
       "matched_programs": [],
       "priority": "monitor",
-      "discovered_date": "2026-11-05T20:57:53.835900",
-      "last_updated": "2026-11-05T20:59:18.370500"
+      "discovered_date": "2026-11-06T20:18:07.415782",
+      "last_updated": "2026-11-06T20:19:29.155434"
     },
     {
       "grant_id": "3d31ab3faf142856",
@@ -289,8 +289,8 @@
         "resilience_nursery"
       ],
       "priority": "monitor",
-      "discovered_date": "2026-11-05T20:57:53.835843",
-      "last_updated": "2026-11-05T20:59:18.370499"
+      "discovered_date": "2026-11-06T20:18:07.415727",
+      "last_updated": "2026-11-06T20:19:29.155432"
     },
     {
       "grant_id": "c0c1fc638ae22ccb",
@@ -313,8 +313,8 @@
       "relevance_score": 40.9,
       "matched_programs": [],
       "priority": "medium",
-      "discovered_date": "2026-11-05T20:57:53.836349",
-      "last_updated": "2026-11-05T20:59:18.370512"
+      "discovered_date": "2026-11-06T20:18:07.416166",
+      "last_updated": "2026-11-06T20:19:29.155450"
     },
     {
       "grant_id": "500894955788da09",
@@ -341,8 +341,8 @@
       "relevance_score": 40.5,
       "matched_programs": [],
       "priority": "medium",
-      "discovered_date": "2026-11-05T20:57:53.834928",
-      "last_updated": "2026-11-05T20:59:18.370443"
+      "discovered_date": "2026-11-06T20:18:07.414815",
+      "last_updated": "2026-11-06T20:19:29.155374"
     },
     {
       "grant_id": "1ab8785fabc82c34",
@@ -371,7 +371,7 @@
       "matched_programs": [],
       "priority": "medium",
       "discovered_date": "2026-06-08T16:00:00",
-      "last_updated": "2026-11-05T20:59:18.370583"
+      "last_updated": "2026-11-06T20:19:29.155546"
     },
     {
       "grant_id": "453d919c19c664bf",
@@ -398,7 +398,34 @@
       "matched_programs": [],
       "priority": "low",
       "discovered_date": "2026-08-28T20:30:00",
-      "last_updated": "2026-11-05T20:59:18.370546"
+      "last_updated": "2026-11-06T20:19:29.155497"
+    },
+    {
+      "grant_id": "e2830ebc831ea79d",
+      "name": "Dam Safety and Climate Resilience Local Assistance",
+      "source": "rss_ca_grants_portal",
+      "url": "https://www.grants.ca.gov/grants/dam-safety-and-climate-resilience-local-assistance/",
+      "amount_min": 0.0,
+      "amount_max": 0.0,
+      "amount_text": "",
+      "deadline": null,
+      "deadline_text": "",
+      "status": "unknown",
+      "grant_type": "state_grant",
+      "description": "Approximately 10 percent of the 1,236 State jurisdictional dams regulated by DWR's Division of Safety of Dams (DSOD) have been assigned a condition assessment classification of less than \"Satisfactory\" (e.g., they have noted deficiencies that need remediation). In many cases, these dams pose a significant threat to communities downstream. As an interim risk reduction measure, more than 40 of these dams have had reservoir restrictions imposed. The loss of water storage from these reservoir restri",
+      "focus_areas": [
+        "Climate",
+        "Water"
+      ],
+      "geographic_scope": "California",
+      "eligibility_notes": "",
+      "how_to_apply": "See https://www.grants.ca.gov/grants/dam-safety-and-climate-resilience-local-assistance/",
+      "funder": "",
+      "relevance_score": 39.3,
+      "matched_programs": [],
+      "priority": "low",
+      "discovered_date": "2026-11-06T16:00:00",
+      "last_updated": "2026-11-06T20:19:29.155461"
     },
     {
       "grant_id": "d6595a2d70997ffb",
@@ -428,7 +455,7 @@
       "matched_programs": [],
       "priority": "low",
       "discovered_date": "2026-10-01T20:22:00",
-      "last_updated": "2026-11-05T20:59:18.370527"
+      "last_updated": "2026-11-06T20:19:29.155472"
     },
     {
       "grant_id": "5f5923f6961907a5",
@@ -456,8 +483,8 @@
       "relevance_score": 38.8,
       "matched_programs": [],
       "priority": "monitor",
-      "discovered_date": "2026-11-05T20:57:53.834963",
-      "last_updated": "2026-11-05T20:59:18.370465"
+      "discovered_date": "2026-11-06T20:18:07.414846",
+      "last_updated": "2026-11-06T20:19:29.155389"
     },
     {
       "grant_id": "b78c54b8158f8e51",
@@ -482,8 +509,8 @@
       "relevance_score": 38.8,
       "matched_programs": [],
       "priority": "monitor",
-      "discovered_date": "2026-11-05T20:57:53.835957",
-      "last_updated": "2026-11-05T20:59:18.370504"
+      "discovered_date": "2026-11-06T20:18:07.415836",
+      "last_updated": "2026-11-06T20:19:29.155439"
     },
     {
       "grant_id": "688109f5b9d600f7",
@@ -510,7 +537,7 @@
       "matched_programs": [],
       "priority": "low",
       "discovered_date": "2026-09-25T15:00:00",
-      "last_updated": "2026-11-05T20:59:18.370533"
+      "last_updated": "2026-11-06T20:19:29.155478"
     },
     {
       "grant_id": "2bc15c1d2cca6350",
@@ -540,7 +567,7 @@
       "matched_programs": [],
       "priority": "low",
       "discovered_date": "2026-06-11T17:30:00",
-      "last_updated": "2026-11-05T20:59:18.370580"
+      "last_updated": "2026-11-06T20:19:29.155542"
     },
     {
       "grant_id": "776324bee7f49a16",
@@ -570,7 +597,7 @@
       "matched_programs": [],
       "priority": "low",
       "discovered_date": "2026-06-11T17:00:00",
-      "last_updated": "2026-11-05T20:59:18.370581"
+      "last_updated": "2026-11-06T20:19:29.155544"
     },
     {
       "grant_id": "25835faa0fce2533",
@@ -598,8 +625,8 @@
       "relevance_score": 36.0,
       "matched_programs": [],
       "priority": "low",
-      "discovered_date": "2026-11-05T20:57:53.835727",
-      "last_updated": "2026-11-05T20:59:18.370481"
+      "discovered_date": "2026-11-06T20:18:07.415614",
+      "last_updated": "2026-11-06T20:19:29.155409"
     },
     {
       "grant_id": "c1bfd1ee65d398aa",
@@ -626,8 +653,8 @@
       "relevance_score": 35.0,
       "matched_programs": [],
       "priority": "monitor",
-      "discovered_date": "2026-11-05T20:57:53.835796",
-      "last_updated": "2026-11-05T20:59:18.370490"
+      "discovered_date": "2026-11-06T20:18:07.415680",
+      "last_updated": "2026-11-06T20:19:29.155420"
     },
     {
       "grant_id": "196168f5aded8279",
@@ -654,7 +681,7 @@
       "matched_programs": [],
       "priority": "low",
       "discovered_date": "2026-10-06T00:02:00",
-      "last_updated": "2026-11-05T20:59:18.370526"
+      "last_updated": "2026-11-06T20:19:29.155470"
     },
     {
       "grant_id": "f6c7bbcc7c22ccaf",
@@ -680,7 +707,7 @@
       "matched_programs": [],
       "priority": "low",
       "discovered_date": "2026-08-03T15:40:00",
-      "last_updated": "2026-11-05T20:59:18.370559"
+      "last_updated": "2026-11-06T20:19:29.155514"
     },
     {
       "grant_id": "de07076215b6ba41",
@@ -706,7 +733,7 @@
       "matched_programs": [],
       "priority": "low",
       "discovered_date": "2026-06-20T18:52:00",
-      "last_updated": "2026-11-05T20:59:18.370572"
+      "last_updated": "2026-11-06T20:19:29.155533"
     },
     {
       "grant_id": "a08a29ca2330238f",
@@ -732,7 +759,7 @@
       "matched_programs": [],
       "priority": "low",
       "discovered_date": "2026-08-12T19:58:00",
-      "last_updated": "2026-11-05T20:59:18.370554"
+      "last_updated": "2026-11-06T20:19:29.155508"
     },
     {
       "grant_id": "32fb146c6406626d",
@@ -758,8 +785,8 @@
       "relevance_score": 32.6,
       "matched_programs": [],
       "priority": "monitor",
-      "discovered_date": "2026-11-05T20:57:53.835762",
-      "last_updated": "2026-11-05T20:59:18.370485"
+      "discovered_date": "2026-11-06T20:18:07.415647",
+      "last_updated": "2026-11-06T20:19:29.155414"
     },
     {
       "grant_id": "54f1f57ed33bdc93",
@@ -785,8 +812,8 @@
       "relevance_score": 32.6,
       "matched_programs": [],
       "priority": "monitor",
-      "discovered_date": "2026-11-05T20:57:53.835967",
-      "last_updated": "2026-11-05T20:59:18.370505"
+      "discovered_date": "2026-11-06T20:18:07.415846",
+      "last_updated": "2026-11-06T20:19:29.155441"
     },
     {
       "grant_id": "dec4dd11c7505d00",
@@ -813,7 +840,7 @@
       "matched_programs": [],
       "priority": "low",
       "discovered_date": "2026-07-06T18:27:00",
-      "last_updated": "2026-11-05T20:59:18.370569"
+      "last_updated": "2026-11-06T20:19:29.155528"
     },
     {
       "grant_id": "fdd1d29f634cc1c4",
@@ -839,7 +866,7 @@
       "matched_programs": [],
       "priority": "low",
       "discovered_date": "2026-10-14T18:59:00",
-      "last_updated": "2026-11-05T20:59:18.370522"
+      "last_updated": "2026-11-06T20:19:29.155465"
     },
     {
       "grant_id": "31742f282f41db49",
@@ -864,8 +891,8 @@
       "relevance_score": 30.7,
       "matched_programs": [],
       "priority": "low",
-      "discovered_date": "2026-11-05T20:57:53.834938",
-      "last_updated": "2026-11-05T20:59:18.370461"
+      "discovered_date": "2026-11-06T20:18:07.414826",
+      "last_updated": "2026-11-06T20:19:29.155384"
     },
     {
       "grant_id": "2d6fbcb8e7952ff1",
@@ -890,8 +917,8 @@
       "relevance_score": 30.7,
       "matched_programs": [],
       "priority": "monitor",
-      "discovered_date": "2026-11-05T20:57:53.835980",
-      "last_updated": "2026-11-05T20:59:18.370508"
+      "discovered_date": "2026-11-06T20:18:07.415859",
+      "last_updated": "2026-11-06T20:19:29.155445"
     },
     {
       "grant_id": "11325c33673e0be1",
@@ -914,8 +941,8 @@
       "relevance_score": 30.7,
       "matched_programs": [],
       "priority": "low",
-      "discovered_date": "2026-11-05T20:57:53.836363",
-      "last_updated": "2026-11-05T20:59:18.370515"
+      "discovered_date": "2026-11-06T20:18:07.416179",
+      "last_updated": "2026-11-06T20:19:29.155454"
     },
     {
       "grant_id": "3ee530e10b2ec4b2",
@@ -941,7 +968,7 @@
       "matched_programs": [],
       "priority": "low",
       "discovered_date": "2026-09-30T18:10:00",
-      "last_updated": "2026-11-05T20:59:18.370532"
+      "last_updated": "2026-11-06T20:19:29.155477"
     },
     {
       "grant_id": "3788b9569827557e",
@@ -968,7 +995,7 @@
       "matched_programs": [],
       "priority": "low",
       "discovered_date": "2026-08-21T22:42:00",
-      "last_updated": "2026-11-05T20:59:18.370550"
+      "last_updated": "2026-11-06T20:19:29.155501"
     },
     {
       "grant_id": "fbed14702f35fc9c",
@@ -992,7 +1019,7 @@
       "matched_programs": [],
       "priority": "low",
       "discovered_date": "2026-09-17T17:28:00",
-      "last_updated": "2026-11-05T20:59:18.370536"
+      "last_updated": "2026-11-06T20:19:29.155483"
     },
     {
       "grant_id": "61b610f95ff32ccb",
@@ -1017,8 +1044,8 @@
       "relevance_score": 29.4,
       "matched_programs": [],
       "priority": "monitor",
-      "discovered_date": "2026-11-05T20:57:53.835973",
-      "last_updated": "2026-11-05T20:59:18.370507"
+      "discovered_date": "2026-11-06T20:18:07.415852",
+      "last_updated": "2026-11-06T20:19:29.155443"
     },
     {
       "grant_id": "b6e2efcd4f3e9e9f",
@@ -1041,8 +1068,8 @@
       "relevance_score": 28.8,
       "matched_programs": [],
       "priority": "low",
-      "discovered_date": "2026-11-05T20:57:53.836391",
-      "last_updated": "2026-11-05T20:59:18.370517"
+      "discovered_date": "2026-11-06T20:18:07.416224",
+      "last_updated": "2026-11-06T20:19:29.155457"
     },
     {
       "grant_id": "473314ee84106ae4",
@@ -1069,8 +1096,8 @@
       "relevance_score": 28.4,
       "matched_programs": [],
       "priority": "monitor",
-      "discovered_date": "2026-11-05T20:57:53.835717",
-      "last_updated": "2026-11-05T20:59:18.370480"
+      "discovered_date": "2026-11-06T20:18:07.415604",
+      "last_updated": "2026-11-06T20:19:29.155407"
     },
     {
       "grant_id": "fc205aac752a2334",
@@ -1095,8 +1122,8 @@
       "relevance_score": 28.4,
       "matched_programs": [],
       "priority": "low",
-      "discovered_date": "2026-11-05T20:57:53.835744",
-      "last_updated": "2026-11-05T20:59:18.370483"
+      "discovered_date": "2026-11-06T20:18:07.415630",
+      "last_updated": "2026-11-06T20:19:29.155411"
     },
     {
       "grant_id": "e783d81a70af5eeb",
@@ -1123,7 +1150,7 @@
       "matched_programs": [],
       "priority": "low",
       "discovered_date": "2026-06-16T20:25:00",
-      "last_updated": "2026-11-05T20:59:18.370577"
+      "last_updated": "2026-11-06T20:19:29.155537"
     },
     {
       "grant_id": "251d8a20da5c1489",
@@ -1150,8 +1177,8 @@
       "relevance_score": 27.9,
       "matched_programs": [],
       "priority": "monitor",
-      "discovered_date": "2026-11-05T20:57:53.835910",
-      "last_updated": "2026-11-05T20:59:18.370502"
+      "discovered_date": "2026-11-06T20:18:07.415793",
+      "last_updated": "2026-11-06T20:19:29.155437"
     },
     {
       "grant_id": "a1ce8cf8dd4a0550",
@@ -1177,7 +1204,7 @@
       "matched_programs": [],
       "priority": "low",
       "discovered_date": "2026-07-15T16:40:00",
-      "last_updated": "2026-11-05T20:59:18.370563"
+      "last_updated": "2026-11-06T20:19:29.155519"
     },
     {
       "grant_id": "74992d315d4bb335",
@@ -1202,8 +1229,8 @@
       "relevance_score": 26.5,
       "matched_programs": [],
       "priority": "low",
-      "discovered_date": "2026-11-05T20:57:53.835753",
-      "last_updated": "2026-11-05T20:59:18.370484"
+      "discovered_date": "2026-11-06T20:18:07.415638",
+      "last_updated": "2026-11-06T20:19:29.155412"
     },
     {
       "grant_id": "fecaf1c00fe6fc21",
@@ -1229,7 +1256,7 @@
       "matched_programs": [],
       "priority": "low",
       "discovered_date": "2026-10-01T07:00:00",
-      "last_updated": "2026-11-05T20:59:18.370529"
+      "last_updated": "2026-11-06T20:19:29.155473"
     },
     {
       "grant_id": "1140fd4a1335f65d",
@@ -1256,7 +1283,7 @@
       "matched_programs": [],
       "priority": "low",
       "discovered_date": "2026-09-15T20:00:00",
-      "last_updated": "2026-11-05T20:59:18.370538"
+      "last_updated": "2026-11-06T20:19:29.155487"
     },
     {
       "grant_id": "8cc57da5710044f1",
@@ -1285,7 +1312,7 @@
       "matched_programs": [],
       "priority": "low",
       "discovered_date": "2026-06-11T17:33:00",
-      "last_updated": "2026-11-05T20:59:18.370579"
+      "last_updated": "2026-11-06T20:19:29.155541"
     },
     {
       "grant_id": "0b55b2cc35f759d3",
@@ -1309,7 +1336,7 @@
       "matched_programs": [],
       "priority": "low",
       "discovered_date": "2026-09-30T18:33:00",
-      "last_updated": "2026-11-05T20:59:18.370531"
+      "last_updated": "2026-11-06T20:19:29.155475"
     },
     {
       "grant_id": "8b14b9faa997380d",
@@ -1333,7 +1360,7 @@
       "matched_programs": [],
       "priority": "low",
       "discovered_date": "2026-10-08T07:01:00",
-      "last_updated": "2026-11-05T20:59:18.370523"
+      "last_updated": "2026-11-06T20:19:29.155466"
     },
     {
       "grant_id": "7969c86fe339fe0d",
@@ -1361,8 +1388,8 @@
       "relevance_score": 25.6,
       "matched_programs": [],
       "priority": "monitor",
-      "discovered_date": "2026-11-05T20:57:53.834984",
-      "last_updated": "2026-11-05T20:59:18.370469"
+      "discovered_date": "2026-11-06T20:18:07.414867",
+      "last_updated": "2026-11-06T20:19:29.155393"
     },
     {
       "grant_id": "9c44db49756102ff",
@@ -1388,7 +1415,7 @@
       "matched_programs": [],
       "priority": "low",
       "discovered_date": "2026-09-21T19:30:00",
-      "last_updated": "2026-11-05T20:59:18.370534"
+      "last_updated": "2026-11-06T20:19:29.155480"
     },
     {
       "grant_id": "0366cb42e97b90a6",
@@ -1414,7 +1441,7 @@
       "matched_programs": [],
       "priority": "low",
       "discovered_date": "2026-06-24T17:00:00",
-      "last_updated": "2026-11-05T20:59:18.370571"
+      "last_updated": "2026-11-06T20:19:29.155531"
     },
     {
       "grant_id": "77d323a9e7653ecb",
@@ -1442,34 +1469,8 @@
       "relevance_score": 23.6,
       "matched_programs": [],
       "priority": "low",
-      "discovered_date": "2026-11-05T20:57:53.835692",
-      "last_updated": "2026-11-05T20:59:18.370476"
-    },
-    {
-      "grant_id": "5a35739c4eb3d6d2",
-      "name": "Round 11b Sustainable Agricultural Lands Conservation Program (SALC) Agricultural Conservation Acquisition Grants",
-      "source": "rss_ca_grants_portal",
-      "url": "https://www.grants.ca.gov/grants/round-11b-sustainable-agricultural-lands-conservation-program-salc-agricultural-conservation-acquisition-grants/",
-      "amount_min": 0.0,
-      "amount_max": 0.0,
-      "amount_text": "",
-      "deadline": null,
-      "deadline_text": "",
-      "status": "unknown",
-      "grant_type": "state_grant",
-      "description": "The Sustainable Agricultural Lands Conservation Program (SALC) supports the state's greenhouse gas (GHG) emission goals by making strategic investments to protect agricultural lands. Agricultural Conservation Acquisitions provide funding to leverage the protection of strategically located, highly productive, and critically threatened agricultural land, via the purchase of permanent agricultural conservation easements and fee title purchases.",
-      "focus_areas": [
-        "Conservation"
-      ],
-      "geographic_scope": "National (U.S.)",
-      "eligibility_notes": "",
-      "how_to_apply": "See https://www.grants.ca.gov/grants/round-11b-sustainable-agricultural-lands-conservation-program-salc-agricultural-conservation-acquisition-grants/",
-      "funder": "",
-      "relevance_score": 23.6,
-      "matched_programs": [],
-      "priority": "low",
-      "discovered_date": "2026-06-03T21:22:00",
-      "last_updated": "2026-11-05T20:59:18.370584"
+      "discovered_date": "2026-11-06T20:18:07.415582",
+      "last_updated": "2026-11-06T20:19:29.155402"
     },
     {
       "grant_id": "090c8e4a1f143939",
@@ -1496,7 +1497,7 @@
       "matched_programs": [],
       "priority": "low",
       "discovered_date": "2026-08-05T19:55:00",
-      "last_updated": "2026-11-05T20:59:18.370558"
+      "last_updated": "2026-11-06T20:19:29.155513"
     },
     {
       "grant_id": "32ff5f419e7ae3a7",
@@ -1520,7 +1521,7 @@
       "matched_programs": [],
       "priority": "low",
       "discovered_date": "2026-07-30T20:48:00",
-      "last_updated": "2026-11-05T20:59:18.370560"
+      "last_updated": "2026-11-06T20:19:29.155516"
     },
     {
       "grant_id": "00c2ace458fb9708",
@@ -1543,8 +1544,8 @@
       "relevance_score": 21.1,
       "matched_programs": [],
       "priority": "low",
-      "discovered_date": "2026-11-05T20:57:53.836397",
-      "last_updated": "2026-11-05T20:59:18.370519"
+      "discovered_date": "2026-11-06T20:18:07.416229",
+      "last_updated": "2026-11-06T20:19:29.155459"
     },
     {
       "grant_id": "be508f6bde863632",
@@ -1570,7 +1571,7 @@
       "matched_programs": [],
       "priority": "low",
       "discovered_date": "2026-06-16T20:28:00",
-      "last_updated": "2026-11-05T20:59:18.370575"
+      "last_updated": "2026-11-06T20:19:29.155536"
     },
     {
       "grant_id": "ee3878d083ec9ad1",
@@ -1599,7 +1600,7 @@
       "matched_programs": [],
       "priority": "low",
       "discovered_date": "2026-09-08T17:30:00",
-      "last_updated": "2026-11-05T20:59:18.370542"
+      "last_updated": "2026-11-06T20:19:29.155492"
     },
     {
       "grant_id": "8e1216a42673bd6e",
@@ -1629,8 +1630,8 @@
       "relevance_score": 20.2,
       "matched_programs": [],
       "priority": "low",
-      "discovered_date": "2026-11-05T20:57:53.835659",
-      "last_updated": "2026-11-05T20:59:18.370470"
+      "discovered_date": "2026-11-06T20:18:07.415562",
+      "last_updated": "2026-11-06T20:19:29.155395"
     },
     {
       "grant_id": "317382940561dfd2",
@@ -1659,8 +1660,8 @@
       "relevance_score": 19.8,
       "matched_programs": [],
       "priority": "low",
-      "discovered_date": "2026-11-05T20:57:53.835669",
-      "last_updated": "2026-11-05T20:59:18.370474"
+      "discovered_date": "2026-11-06T20:18:07.415572",
+      "last_updated": "2026-11-06T20:19:29.155399"
     },
     {
       "grant_id": "56af20566ba749ca",
@@ -1686,7 +1687,7 @@
       "matched_programs": [],
       "priority": "low",
       "discovered_date": "2026-07-08T18:02:00",
-      "last_updated": "2026-11-05T20:59:18.370568"
+      "last_updated": "2026-11-06T20:19:29.155526"
     },
     {
       "grant_id": "3815bf5fc807ddb4",
@@ -1712,7 +1713,7 @@
       "matched_programs": [],
       "priority": "low",
       "discovered_date": "2026-10-23T22:31:00",
-      "last_updated": "2026-11-05T20:59:18.370520"
+      "last_updated": "2026-11-06T20:19:29.155463"
     },
     {
       "grant_id": "b9548168149d72f5",
@@ -1737,8 +1738,8 @@
       "relevance_score": 18.8,
       "matched_programs": [],
       "priority": "low",
-      "discovered_date": "2026-11-05T20:57:53.835777",
-      "last_updated": "2026-11-05T20:59:18.370488"
+      "discovered_date": "2026-11-06T20:18:07.415662",
+      "last_updated": "2026-11-06T20:19:29.155418"
     },
     {
       "grant_id": "3dace5b0c20fd9ca",
@@ -1766,8 +1767,8 @@
       "relevance_score": 18.2,
       "matched_programs": [],
       "priority": "monitor",
-      "discovered_date": "2026-11-05T20:57:53.834975",
-      "last_updated": "2026-11-05T20:59:18.370467"
+      "discovered_date": "2026-11-06T20:18:07.414858",
+      "last_updated": "2026-11-06T20:19:29.155391"
     },
     {
       "grant_id": "2f87322d6a584899",
@@ -1794,8 +1795,8 @@
       "relevance_score": 18.2,
       "matched_programs": [],
       "priority": "low",
-      "discovered_date": "2026-11-05T20:57:53.835769",
-      "last_updated": "2026-11-05T20:59:18.370487"
+      "discovered_date": "2026-11-06T20:18:07.415654",
+      "last_updated": "2026-11-06T20:19:29.155416"
     },
     {
       "grant_id": "2ca44ea3416dba4c",
@@ -1821,7 +1822,7 @@
       "matched_programs": [],
       "priority": "low",
       "discovered_date": "2026-09-01T14:54:00",
-      "last_updated": "2026-11-05T20:59:18.370543"
+      "last_updated": "2026-11-06T20:19:29.155494"
     },
     {
       "grant_id": "8b3d426c8a835692",
@@ -1847,7 +1848,7 @@
       "matched_programs": [],
       "priority": "low",
       "discovered_date": "2026-06-16T00:00:00",
-      "last_updated": "2026-11-05T20:59:18.370578"
+      "last_updated": "2026-11-06T20:19:29.155539"
     },
     {
       "grant_id": "92fd9851fa8a38e0",
@@ -1874,7 +1875,7 @@
       "matched_programs": [],
       "priority": "low",
       "discovered_date": "2026-08-06T00:00:00",
-      "last_updated": "2026-11-05T20:59:18.370556"
+      "last_updated": "2026-11-06T20:19:29.155510"
     },
     {
       "grant_id": "7564de54364d8dc2",
@@ -1897,8 +1898,8 @@
       "relevance_score": 15.9,
       "matched_programs": [],
       "priority": "low",
-      "discovered_date": "2026-11-05T20:57:53.836241",
-      "last_updated": "2026-11-05T20:59:18.370509"
+      "discovered_date": "2026-11-06T20:18:07.416086",
+      "last_updated": "2026-11-06T20:19:29.155446"
     },
     {
       "grant_id": "e9be3e78fc5c2cdc",
@@ -1926,8 +1927,8 @@
       "relevance_score": 13.2,
       "matched_programs": [],
       "priority": "monitor",
-      "discovered_date": "2026-11-05T20:57:53.835705",
-      "last_updated": "2026-11-05T20:59:18.370478"
+      "discovered_date": "2026-11-06T20:18:07.415591",
+      "last_updated": "2026-11-06T20:19:29.155405"
     },
     {
       "grant_id": "1f099c3818b63386",
@@ -1951,7 +1952,7 @@
       "matched_programs": [],
       "priority": "low",
       "discovered_date": "2026-08-19T16:00:00",
-      "last_updated": "2026-11-05T20:59:18.370551"
+      "last_updated": "2026-11-06T20:19:29.155503"
     },
     {
       "grant_id": "bab237241161b292",
@@ -1978,7 +1979,7 @@
       "matched_programs": [],
       "priority": "low",
       "discovered_date": "2026-07-15T05:00:00",
-      "last_updated": "2026-11-05T20:59:18.370564"
+      "last_updated": "2026-11-06T20:19:29.155521"
     },
     {
       "grant_id": "8ecb1e04cc3387c4",
@@ -2004,7 +2005,7 @@
       "matched_programs": [],
       "priority": "low",
       "discovered_date": "2026-09-09T16:54:00",
-      "last_updated": "2026-11-05T20:59:18.370541"
+      "last_updated": "2026-11-06T20:19:29.155490"
     },
     {
       "grant_id": "daa705b00332a8eb",
@@ -2030,7 +2031,7 @@
       "matched_programs": [],
       "priority": "low",
       "discovered_date": "2026-07-15T05:00:00",
-      "last_updated": "2026-11-05T20:59:18.370565"
+      "last_updated": "2026-11-06T20:19:29.155523"
     },
     {
       "grant_id": "541e8b8cb12cc76c",
@@ -2055,8 +2056,8 @@
       "relevance_score": 9.0,
       "matched_programs": [],
       "priority": "low",
-      "discovered_date": "2026-11-05T20:57:53.835826",
-      "last_updated": "2026-11-05T20:59:18.370495"
+      "discovered_date": "2026-11-06T20:18:07.415711",
+      "last_updated": "2026-11-06T20:19:29.155427"
     },
     {
       "grant_id": "dde5fd9469c67c9a",
@@ -2080,7 +2081,7 @@
       "matched_programs": [],
       "priority": "low",
       "discovered_date": "2026-07-01T16:00:00",
-      "last_updated": "2026-11-05T20:59:18.370570"
+      "last_updated": "2026-11-06T20:19:29.155529"
     },
     {
       "grant_id": "a0ec71472b80568f",
@@ -2105,8 +2106,8 @@
       "relevance_score": 0.0,
       "matched_programs": [],
       "priority": "low",
-      "discovered_date": "2026-11-05T20:57:53.835805",
-      "last_updated": "2026-11-05T20:59:18.370491"
+      "discovered_date": "2026-11-06T20:18:07.415688",
+      "last_updated": "2026-11-06T20:19:29.155422"
     },
     {
       "grant_id": "2a4089cfce507bda",
@@ -2131,8 +2132,8 @@
       "relevance_score": 0.0,
       "matched_programs": [],
       "priority": "low",
-      "discovered_date": "2026-11-05T20:57:53.835811",
-      "last_updated": "2026-11-05T20:59:18.370492"
+      "discovered_date": "2026-11-06T20:18:07.415695",
+      "last_updated": "2026-11-06T20:19:29.155423"
     },
     {
       "grant_id": "b2f1fad76f48cb69",
@@ -2157,8 +2158,8 @@
       "relevance_score": 0.0,
       "matched_programs": [],
       "priority": "low",
-      "discovered_date": "2026-11-05T20:57:53.835817",
-      "last_updated": "2026-11-05T20:59:18.370494"
+      "discovered_date": "2026-11-06T20:18:07.415701",
+      "last_updated": "2026-11-06T20:19:29.155425"
     },
     {
       "grant_id": "529e42c7d53c7b25",
@@ -2183,8 +2184,8 @@
       "relevance_score": 0.0,
       "matched_programs": [],
       "priority": "low",
-      "discovered_date": "2026-11-05T20:57:53.835833",
-      "last_updated": "2026-11-05T20:59:18.370497"
+      "discovered_date": "2026-11-06T20:18:07.415718",
+      "last_updated": "2026-11-06T20:19:29.155430"
     },
     {
       "grant_id": "8d314d8b0fe5e996",
@@ -2207,8 +2208,8 @@
       "relevance_score": 0.0,
       "matched_programs": [],
       "priority": "low",
-      "discovered_date": "2026-11-05T20:57:53.836267",
-      "last_updated": "2026-11-05T20:59:18.370511"
+      "discovered_date": "2026-11-06T20:18:07.416105",
+      "last_updated": "2026-11-06T20:19:29.155448"
     },
     {
       "grant_id": "162f1ce677f275c4",
@@ -2231,8 +2232,8 @@
       "relevance_score": 0.0,
       "matched_programs": [],
       "priority": "low",
-      "discovered_date": "2026-11-05T20:57:53.836357",
-      "last_updated": "2026-11-05T20:59:18.370513"
+      "discovered_date": "2026-11-06T20:18:07.416173",
+      "last_updated": "2026-11-06T20:19:29.155452"
     },
     {
       "grant_id": "ff2d4929e6180851",
@@ -2255,8 +2256,8 @@
       "relevance_score": 0.0,
       "matched_programs": [],
       "priority": "low",
-      "discovered_date": "2026-11-05T20:57:53.836384",
-      "last_updated": "2026-11-05T20:59:18.370516"
+      "discovered_date": "2026-11-06T20:18:07.416214",
+      "last_updated": "2026-11-06T20:19:29.155455"
     },
     {
       "grant_id": "5877c2b23e75aad4",
@@ -2282,7 +2283,7 @@
       "matched_programs": [],
       "priority": "low",
       "discovered_date": "2026-10-06T16:00:00",
-      "last_updated": "2026-11-05T20:59:18.370525"
+      "last_updated": "2026-11-06T20:19:29.155468"
     }
   ]
 }
